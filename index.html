@@ -34,28 +34,6 @@
             padding: 20px;
         }
 
-        /* Bypass button for testing */
-        .bypass-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 10px 20px;
-            border: 2px solid white;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 0.9em;
-            z-index: 1000;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-        }
-
-        .bypass-btn:hover {
-            background: rgba(255, 255, 255, 0.5);
-            transform: scale(1.05);
-        }
-
         .countdown-title {
             font-size: 2.5em;
             color: white;
@@ -985,9 +963,6 @@
     <div id="page1">
         <div class="floating-hearts" id="floatingHearts"></div>
         
-        <!-- Bypass button for testing -->
-        <button class="bypass-btn" onclick="bypassCountdown()">🔧 Skip (Test Mode)</button>
-        
         <div class="countdown-container" id="countdownContainer">
             <h1 class="countdown-title">✨ Something special is coming... ✨</h1>
             <div class="countdown-timer" id="countdownTimer">
@@ -1197,13 +1172,6 @@ trust and love on me. I will show you how beautiful this life is when you spend 
         }
 
         createFloatingHearts();
-
-        // ==================== BYPASS FOR TESTING ====================
-        function bypassCountdown() {
-            document.getElementById('countdownContainer').style.display = 'none';
-            document.getElementById('celebrationMessage').style.display = 'block';
-            createConfetti();
-        }
 
         // ==================== NAVIGATION ====================
         function goToPage2() {
